@@ -89,7 +89,7 @@ namespace Server
             }
             // add user's name, link and expiration time to html template
             HtmlFormat = HtmlFormat.Replace("$link",link)
-                .Replace("$baseUrl", baseUrl.RemoveLastChar())
+                .Replace("$baseUrl", baseUrl)
                 .Replace("$name", string.IsNullOrEmpty(user.DisplayName) ? user.Email : user.DisplayName);
             
             // email to send 
@@ -126,7 +126,7 @@ namespace Server
             }
             // add user's name, link and expiration time to html template
             HtmlFormat = HtmlFormat.Replace("$code",code)
-                .Replace("$baseUrl", baseUrl.RemoveLastChar())
+                .Replace("$baseUrl", baseUrl)
                 .Replace("$name", string.IsNullOrEmpty(user.DisplayName) ? user.Email : user.DisplayName);
             
             // email to send 

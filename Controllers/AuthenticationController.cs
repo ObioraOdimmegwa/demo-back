@@ -46,6 +46,7 @@ namespace Server
         private readonly IConfiguration Configuration;
         private readonly DatabaseContext _context;
         private readonly ICommunicationServices CommService;
+        private readonly Uri _clientUri;
 
         public AuthenticationController(UserManager<User> userManager,
         IConfiguration configuration, SignInManager<User> signInManager,
@@ -61,6 +62,8 @@ namespace Server
                 throw new ArgumentNullException(nameof(context));
             CommService = coms ??
                 throw new ArgumentNullException(nameof(coms));
+            _clientUri = new Uri(Configuration.GetSection("Client")["BaseUrl"]);
+
         }
         [HttpPost("/register")]
         public async Task<IActionResult> RegisterAsync(SignUpForm form)
@@ -128,7 +131,7 @@ namespace Server
                 }
                 await _context.SaveChangesAsync();
                 Console.WriteLine($"New Login 2 factor code {valToken.Token}");
-                await CommService.Send2FactorCode(user,valToken.Token,HttpContext.Request.Host.ToUriComponent());
+                await CommService.Send2FactorCode(user,valToken.Token,_clientUri.AbsoluteUri);
                 return Ok(new LoginResponse
                 {
                     Token = string.Empty,
@@ -192,7 +195,7 @@ namespace Server
                 });
             }
             string resetToken = await UserManager.GeneratePasswordResetTokenAsync(user);
-            string resetUrl =$"https://192.168.43.68:5001/reset-password/{HttpUtility.UrlEncode(resetToken)}";
+            string resetUrl =$"{_clientUri.AbsoluteUri}/reset-password/{HttpUtility.UrlEncode(resetToken)}";
             Console.WriteLine($"Reset password with {resetUrl}");
             await CommService.SendPasswordReset(user,resetUrl,HttpContext.Request.Host.ToUriComponent());            
             var valToken = new ValidationToken

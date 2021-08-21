@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4H+9/fdXHjQrvCdLS2fI5IOszyneGpC1XXQqVgRZyUtuJfvQXI+cCzZ6BIHzldzQi7meZEPegdz/2q80AMHUUQ==",
+  "dgSpecHash": "pgkXqRyYOq1xGZe3T1kBh009XquXLaNZsEbOS//5rBi0MWy182Vk/sM6u7YQhv49Qb5xP2ABJlb95to8hN5q3A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Expl0it90\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
     "C:\\Users\\Expl0it90\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

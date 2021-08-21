@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\server\\Server.csproj": {}
+    "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\server\\Server.csproj": {
+    "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\server\\Server.csproj",
+        "projectPath": "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\Expl0it90\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\server\\obj\\",
+        "outputPath": "C:\\Users\\Expl0it90\\Desktop\\Finlexis Seperated\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

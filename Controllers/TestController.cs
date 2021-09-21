@@ -10,7 +10,7 @@ namespace Server
         public ActionResult Get()
         {
             return Json(new {
-                Message = "WELCOME"
+                Message = "WELCOME Again"
             });
         }
     }
